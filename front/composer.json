@@ -1,0 +1,14 @@
+{
+    "require": {
+        "monolog/monolog": "2.*",
+        "bramus/router": "~1.6",
+        "firebase/php-jwt": "^6.9"
+    } ,
+    "autoload" : {
+        "psr-4" : {
+            "Controllers\\" : "src/controller",
+            "Views\\" : "src/view",
+            "Connections\\" : "src/connection"
+        }
+    }
+}
