@@ -29,27 +29,19 @@
             switch ($method) {
 
                 case "post" : 
-
                     curl_setopt ($require, CURLOPT_POST, 1);
                     break;
-
-                // case "get" : 
-
-                //     curl_setopt ($require, CURLOPT_GET, 1);
-                //     break;
-
-                // case "put" : 
-
-                //     curl_setopt ($require, CURLOPT_PUT, 1);
-                //     break;
-
-                // case "delete" : 
-
-                //     curl_setopt ($require, CURLOPT_DELETE, 1);
-                //     break;
-                
+                case "get" : 
+                    curl_setopt ($require, CURLOPT_HTTPGET, 2);
+                    break;
+                case "put" : 
+                    curl_setopt ($require, CURLOPT_PUT, 1);
+                    //curl_setopt ($require, CURLOPT_CUSTOMREQUEST, "PUT");
+                    break;
+                case "delete" : 
+                    //curl_setopt ($require, CURLOPT_HTTPDELETE, 1);
+                    break;
                 default : 
-
                     echo ("método não existe");
                     break;
             }
